@@ -14,4 +14,10 @@ header{
 table {
   text-align: center;
   vertical-align: middle;
+
+}
+  
+a{
+  text-decoration:none;
+  color:#fff;
 }
