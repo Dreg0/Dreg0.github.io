@@ -90,8 +90,8 @@
                         <h5 class="card-header">Service payments</h5>
                         <div class="card-body">
                             <h5 class="card-title"> More than 250 EUR</h5>
-                            <p class="card-text">tankinvoices@austrian.com</p>
-                            <button type="button" class="btn btn-primary">Copy</button>
+                            <p class="card-text copy-text">tankinvoices@austrian.com</p>
+                            <button type="button" class="btn btn-primary" onclick="copyToClipboard('.copy-text')">Copy</button>
                         </div>
                     </div>
                 </div>
@@ -100,8 +100,8 @@
                         <h5 class="card-header">Service payments</h5>
                         <div class="card-body">
                             <h5 class="card-title">Less than 250 EUR</h5>
-                            <p class="card-text">tankinvoices@austrian.com; payments@austrian.com </p>
-                            <button type="button" class="btn btn-primary">Copy</button>
+                            <p class="card-text copy-text">tankinvoices@austrian.com; payments@austrian.com </p>
+                            <button type="button" class="btn btn-primary" onclick="copyToClipboard('.copy-text')">Copy</button>
                         </div>
                     </div>
                 </div>
@@ -138,10 +138,12 @@
         </div>
 
     </section>
+    <script src="js/main.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
+    
     <script>
         CKEDITOR.replace('editor1');
     </script>

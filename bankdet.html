@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Alpha</title>
+</head>
+
+<body>
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">Alpha</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-2">
+                            <a href="index.html" class="nav-link">Main</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="posts.html" class="nav-link">Tables</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="letters.html" class="nav-link">Letters</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="internal.html" class="nav-link">Internal</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a href="bankdet.html" class="nav-link active">Bank Details</a>
+                        </li>
+                    </ul>
+
+                    <!-- <ul class="navbar-nav ml-auto">
+                              <li class="nav-item dropdown mr-3">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-user"></i> Welcome Users
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a href="profile.html" class="dropdown-item">
+                                    <i class="fa fa-user-circle"></i> Profile
+                                  </a>
+                                  <a href="settings.html" class="dropdown-item">
+                                    <i class="fa fa-gear"></i> Settings
+                                  </a>
+                                </div>
+                              </li>
+                              <li class="nav-item">
+                                <a href="login.html" class="nav-link">
+                                  <i class="fa fa-user-times"></i> Logout
+                                </a>
+                              </li>
+                            </ul> -->
+                </div>
+            </div>
+        </nav>
+        <header id="main-header" class="py-2 bg-primary text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md3 px-4">
+                        <a href="http://gc.kls2.com/" title="great circle" target="blank" style="text-decoration:none;color:#fff;">
+                            <h1>
+                                <i class="fa fa-plane"></i>
+                            </h1>
+                        </a>
+                    </div>
+                    <div class="col-md3 px-4">
+                        <a href="https://www.ibancalculator.com/" title="validate iban" target="blank" style="text-decoration:none;color:#fff;">
+                            <h1>
+                                <i class="fa fa-money"></i>
+                            </h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <h5 class="card-header text-center">USA</h5>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Account holder</li>
+                                <li class="list-group-item">Bank name</li>
+                                <li class="list-group-item">Routing number/ABA number (9 digits)</li>
+                                <li class="list-group-item">Bank account number (9 digits)</li>
+                                <li class="list-group-item">SWIFT code (not necessary)</li>
+                                <p class="hidden" id="usa">Account holder, Bank name, Routing number/ABA number, Bank account number</p>
+                                <button type="button" class="btn btn-primary" onclick="copyToClipboard('#usa')">Copy</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <h5 class="card-header text-center">Canada</h5>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Account holder</li>
+                                <li class="list-group-item">Bank name</li>
+                                <li class="list-group-item">Bank key => “0”+ institution number (3 digits)+ transit number (5 digits) = 0 + 003 + 00932
+                                </li>
+                                <li class="list-group-item">Account number</li>
+                                <li class="list-group-item">SWIFT code (obligatory)</li>
+                                <p class="hidden" id="canada">Account holder, Bank name, Bank key, Account number, SWIFT - obligatory</p>
+                                <button type="button" class="btn btn-primary" onclick="copyToClipboard('#canada')">Copy</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <h5 class="card-header text-center">China</h5>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">CNY</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">Account holder name in Chinese and in English</li>
+                                <li class="list-group-item">Bank name in Chinese and in English</li>
+                                <li class="list-group-item">Bank branch in Chinese and in English</li>
+                                <li class="list-group-item">Account number</li>
+                                <li class="list-group-item">CNAPS code</li>
+                                <p class="hidden" id="china-cny">Account holder name in Chinese and in English, Bank name in Chinese and in English, Bank
+                                    branch in Chinese and in English, Account number, CNAPS code</p>
+                                <button type="button" class="btn btn-primary" onclick="copyToClipboard('#china-cny')">Copy</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card">
+                        <h5 class="card-header text-center">China</h5>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">EUR</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">Name of account holder in Chinese and in English</li>
+                                <li class="list-group-item">Bank account</li>
+                                <li class="list-group-item">Bank key</li>
+                                <li class="list-group-item">SWIFT</li>
+                                <li class="list-group-item">Currency of the payment – EUR</li>
+                                <p class="hidden" id="china-eur">Bank account, Bank key, SWIFT, Currency of the payment – EUR</p>
+                                <button type="button" class="btn btn-primary" onclick="copyToClipboard('#china-eur')">Copy</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card">
+                        <h5 class="card-header text-center">Hong Kong</h5>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">HKD and EUR</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">Bank name (max 35 digits)</li>
+                                <li class="list-group-item">Bank address</li>
+                                <li class="list-group-item">SWIFT (8 OR 11 digits)</li>
+                                <li class="list-group-item">Account number (should not exceed 9 digits)</li>
+                                <p class="hidden" id="honk-kong">Bank name, Bank address, SWIFT, Account number</p>
+                                <button type="button" class="btn btn-primary" onclick="copyToClipboard('#honk-kong')">Copy</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card">
+                        <h5 class="card-header text-center">Korea</h5>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">for KRW</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">Bank name</li>
+                                <li class="list-group-item">Bank address</li>
+                                <li class="list-group-item">SWIFT</li>
+                                <li class="list-group-item">Account number</li>
+                                <li class="list-group-item">Account holder</li>
+                                <p class="hidden" id="korea">Bank name, Bank address, SWIFT, Account number, Account holder </p>
+                                <button type="button" class="btn btn-primary" onclick="copyToClipboard('#korea')">Copy</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card">
+                        <h5 class="card-header text-center">Korea</h5>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">for KRW</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">Bank name</li>
+                                <li class="list-group-item">Bank address</li>
+                                <li class="list-group-item">SWIFT</li>
+                                <li class="list-group-item">Account number</li>
+                                <li class="list-group-item">Account holder</li>
+                                <p class="hidden" id="korea">Bank name, Bank address, SWIFT, Account number, Account holder </p>
+                                <button type="button" class="btn btn-primary" onclick="copyToClipboard('#korea')">Copy</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6">
+                
+                    <div class="card">
+                        <h5 class="card-header text-center">Ukraine</h5>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">UAH bank account</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">UAH bank account number (номер власного рахунку отримувача в грн)</li>
+                                <li class="list-group-item">Account holders name in Cyrillic (ПІБ отримувача)</li>
+                                <li class="list-group-item">Bank name (назва банку)</li>
+                                <li class="list-group-item">Bank code (МФО банку)</li>
+                                <li class="list-group-item">Identification code (індентифікаційний номер отримувача)</li>
+                                <li class="list-group-item">Obligatory contact phone numbers (обов’язково надати контактний номер телефону)</li>
+                                <p class="hidden" id="ukraine_acc"></p>
+                                <button type="button" class="btn btn-primary" onclick="copyToClipboard('#ukraine_acc')">Copy</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <h5 class="card-header text-center">Ukraine</h5>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">UAH credit card</h5>
+                            <ul class="list-group">
+                                <!-- <li class="list-group-item">Сard account number (номер карткового рахунку)</li>
+                                <li class="list-group-item">Account holders name in Cyrillic (ПІБ отримувача)</li>
+                                <li class="list-group-item">Transit bank account (номер транзитного рахунку банку)</li>
+                                <li class="list-group-item">Bank name (назва банку)</li>
+                                <li class="list-group-item">Bank code (МФО банку)</li>
+                                <li class="list-group-item">EDRPOU code of bank (ЄДРПОУ банку)</li>
+                                <li class="list-group-item">Obligatory contact phone numbers (обов’язково надати контактний номер телефону)</li> -->
+                                <textarea class="x" id="ukraine_card" rows="7" >Сard account number (номер карткового рахунку)
+Transit bank account (номер транзитного рахунку банку)
+Bank name (назва банку), Bank code (МФО банку)
+EDRPOU code of bank (ЄДРПОУ банку)
+Obligatory contact phone numbers (обов’язково надати контактний номер телефону)
+</textarea>
+                                <!-- <button type="button" class="btn btn-primary" onclick="copyToClipboard('#ukraine_card')">Copy</button> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
+    <!-- shitty framework site by andrii krugliakov 2018 -->
+    <!-- <script>
+        CKEDITOR.replace('editor1');
+    </script> -->
+</body>
+
+</html>

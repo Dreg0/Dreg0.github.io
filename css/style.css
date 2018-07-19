@@ -1,0 +1,17 @@
+/* hide p element for coppying in bankdet cards*/
+
+.hidden {
+  display: none;
+}
+
+section {
+  padding-top: 150px;
+}
+
+header{
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.6)
+}
+table {
+  text-align: center;
+  vertical-align: middle;
+}

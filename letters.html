@@ -83,26 +83,31 @@
         </header>
     </div>
     <section style="margin-top: 150px;">
+
         <div class="container">
             <div id="accordion">
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Collapsible Group Item #1
+                                Approved compensation
                             </button>
                         </h5>
                     </div>
 
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-
-                            Thank you for your email. <br>
-                            Please excuse our late response - unfortunately there is a long handling time for our customer
-                            feedback at the moment due to the large number of requests. <br> We regret to learn about your difficulties
-                            during your journey and apologise for any inconvenience caused.
-
+                        <div class="card-body copy-text">
+                            Thank you for email. Please excuse our late response - unfortunately there is a long handling time for our customer feedback
+                            at the moment due to the large number of requests. We regret to learn about your difficulties
+                            and apologise for any inconvenience caused. What we would like to offer you (without prejudice):
+                            - Compensation EUR250 according to the European regulation 261/2004 According to paragraph 15
+                            General Conditions of Carriage we cannot offer you compensation for consequential costs I have
+                            already initiated the payment process. Please allow up to three weeks for the deposit to appear
+                            in your bank account – thank you! Thank you for choosing Austrian Airlines - we appreciate your
+                            business and hope that your future experience with Austrian will be pleasant again!
+                            <button type="button" class="btn btn-primary" onclick="copyToClipboard('.copy-text')">Copy</button>
                         </div>
+
                     </div>
                 </div>
                 <div class="card">
@@ -115,7 +120,22 @@
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                            Dear colleagues, Please initiate process of full refund according to 2578206501008
+                            <div class="form-group">
+                                <label for="comment">Comment:</label>
+                                <textarea class="form-control" rows="12" id="comment">
+ Thank you for email.
+                                       
+ Please excuse our late response - unfortunately there is a long handling time for our customer feedback
+ at the moment due to the large number of requests.
+                                                
+ We regret to learn about your difficulties and apologise for any inconvenience caused.
+ What we would like to offer you (without prejudice):
+ - Compensation EUR250 according to the European regulation 261/2004
+According to paragraph 15 General Conditions of Carriage we cannot offer you compensation for consequential costs
+ I have already initiated the payment process. Please allow up to three weeks for the deposit to appear in your bank account – thank you!
+ Thank you for choosing Austrian Airlines - we appreciate your business and hope that your future experience with Austrian will be pleasant again!
+                                        </textarea>
+                            </div>
 
                         </div>
                     </div>
@@ -140,6 +160,7 @@
             </div>
         </div>
     </section>
+    <script src="js/main.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
