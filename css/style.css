@@ -20,4 +20,5 @@ table {
 a{
   text-decoration:none;
   color:#fff;
+  transition:0.5s ease-in;
 }
