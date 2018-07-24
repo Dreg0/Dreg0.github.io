@@ -24,16 +24,18 @@
                             <a href="index.html" class="nav-link">Main</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a href="posts.html" class="nav-link">Tables</a>
+                            <a href="letters.html" class="nav-link">Letters</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a href="letters.html" class="nav-link">Letters</a>
+                            <a href="internal_letters" class="nav-link">Internal Letters</a>
                         </li>
                         <li class="nav-item px-2">
                             <a href="internal.html" class="nav-link active">Internal</a>
                         </li>
+                        <li class="nav-item px-2">
+                            <a href="bankdet.html" class="nav-link">Bank Details</a>
+                        </li>
                     </ul>
-
                     <!-- <ul class="navbar-nav ml-auto">
                               <li class="nav-item dropdown mr-3">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -59,28 +61,31 @@
         </nav>
         <header id="main-header" class="py-2 bg-primary text-white">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <h1>
-                            <i class="fa fa-info"></i> Internal</h1>
-                    </div>
-                    <div class="col-md3 px-4">
-                        <a href="http://gc.kls2.com/" title="great circle" target="blank" style="text-decoration:none;color:#fff;">
-                            <h1>
-                                <i class="fa fa-plane"></i>
-                            </h1>
-                        </a>
-                    </div>
-                    <div class="col-md3 px-4">
-                        <a href="https://www.ibancalculator.com/" title="validate iban" target="blank" style="text-decoration:none;color:#fff;">
-                            <h1>
-                                <i class="fa fa-money"></i>
-                            </h1>
-                        </a>
-                    </div>
+              <div class="row">
+                <div class="col-md3 px-4">
+                  <a href="http://gc.kls2.com/" title="great circle" target="_blank">
+                    <h1>
+                      <i class="fa fa-plane"></i>
+                    </h1>
+                  </a>
                 </div>
+                <div class="col-md3 px-4">
+                  <a href="https://www.ibancalculator.com/"title="validate iban" target="_blank">
+                    <h1>
+                      <i class="fa fa-money"></i>
+                    </h1>
+                  </a>
+                </div>
+                <div class="col-md3 px-4">
+                  <a href="https://www.timecalculator.net/" title="time calculator" target="_blank">
+                    <h1>
+                      <i class="fa fa-clock-o"></i>
+                    </h1>
+                  </a>
+                </div>
+              </div>
             </div>
-        </header>
+          </header> 
     </div>
     <section style="margin-top: 150px;">
         <div class="container">
@@ -90,8 +95,8 @@
                         <h5 class="card-header">Service payments</h5>
                         <div class="card-body">
                             <h5 class="card-title"> More than 250 EUR</h5>
-                            <p class="card-text copy-text">tankinvoices@austrian.com</p>
-                            <button type="button" class="btn btn-primary" onclick="copyToClipboard('.copy-text')">Copy</button>
+                            <p class="card-text" id="more_250">tankinvoices@austrian.com</p>
+                            <button type="button" class="btn btn-primary" onclick="copyToClipboard('#more_250')">Copy</button>
                         </div>
                     </div>
                 </div>
@@ -100,8 +105,8 @@
                         <h5 class="card-header">Service payments</h5>
                         <div class="card-body">
                             <h5 class="card-title">Less than 250 EUR</h5>
-                            <p class="card-text copy-text">tankinvoices@austrian.com; payments@austrian.com </p>
-                            <button type="button" class="btn btn-primary" onclick="copyToClipboard('.copy-text')">Copy</button>
+                            <p class="card-text" id="less_250">tankinvoices@austrian.com; payments@austrian.com </p>
+                            <button type="button" class="btn btn-primary" onclick="copyToClipboard('#less_250')">Copy</button>
                         </div>
                     </div>
                 </div>
@@ -112,11 +117,11 @@
                         <h5 class="card-header">Baggage payments</h5>
                         <div class="card-body">
                             <h5 class="card-title"> More than 250 EUR</h5>
-                            <p class="card-text">tankinvoices@austrian.com</p>
-                            <button type="button" class="btn btn-primary">Copy</button>
+                            <p class="card-text" id="bag_more_250">tankinvoices@austrian.com</p>
+                            <button type="button" class="btn btn-primary" onclick="copyToClipboard('#bag_more_250')">Copy</button>
                             <hr class="border-dark">
-                            <p class="card-text">Waltraud.Rasztovits@austrian.com; Renate.Pfeiffer@austrian.com </p>
-                            <button type="button" class="btn btn-primary">Copy</button>
+                            <p class="card-text" id="baggage_more_250">Waltraud.Rasztovits@austrian.com; Renate.Pfeiffer@austrian.com </p>
+                            <button type="button" class="btn btn-primary" onclick="copyToClipboard('#baggage_more_250')">Copy</button>
                         </div>
                     </div>
                 </div>
@@ -125,11 +130,11 @@
                         <h5 class="card-header">Baggage payments</h5>
                         <div class="card-body">
                             <h5 class="card-title">Less than 250 EUR</h5>
-                            <p class="card-text">tankinvoices@austrian.com; payments@austrian.com </p>
-                            <button type="button" class="btn btn-primary">Copy</button>
+                            <p class="card-text" id="bag_les_250">tankinvoices@austrian.com; payments@austrian.com </p>
+                            <button type="button" class="btn btn-primary" onclick="copyToClipboard('#bag_les_250')">Copy</button>
                             <hr class="border-dark">
-                            <p class="card-text">Waltraud.Rasztovits@austrian.com; Renate.Pfeiffer@austrian.com </p>
-                            <button type="button" class="btn btn-primary">Copy</button>
+                            <p class="card-text" id="baggage_less_250">Waltraud.Rasztovits@austrian.com; Renate.Pfeiffer@austrian.com </p>
+                            <button type="button" class="btn btn-primary"onclick="copyToClipboard('#baggage_less_250')">Copy</button>
                         </div>
                     </div>
                 </div>
@@ -143,10 +148,10 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
-    
-    <script>
+
+    <!-- <script>
         CKEDITOR.replace('editor1');
-    </script>
+    </script> -->
 </body>
 
 </html>

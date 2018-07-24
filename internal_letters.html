@@ -62,31 +62,52 @@
         </nav>
         <header id="main-header" class="py-2 bg-primary text-white">
             <div class="container">
-                <div class="row">
-                    <div class="col-md3 px-4">
-                        <a href="http://gc.kls2.com/" title="great circle" target="_blank">
-                            <h1>
-                                <i class="fa fa-plane"></i>
-                            </h1>
-                        </a>
-                    </div>
-                    <div class="col-md3 px-4">
-                        <a href="https://www.ibancalculator.com/" title="validate iban" target="_blank">
-                            <h1>
-                                <i class="fa fa-money"></i>
-                            </h1>
-                        </a>
-                    </div>
-                    <div class="col-md3 px-4">
-                        <a href="https://www.timecalculator.net/" title="time calculator" target="_blank">
-                            <h1>
-                                <i class="fa fa-clock-o"></i>
-                            </h1>
-                        </a>
-                    </div>
+              <div class="row">
+                <div class="col-md3 px-4">
+                  <a href="http://gc.kls2.com/" title="great circle" target="_blank">
+                    <h1>
+                      <i class="fa fa-plane"></i>
+                    </h1>
+                  </a>
                 </div>
+                <div class="col-md3 px-4">
+                  <a href="https://www.ibancalculator.com/"title="validate iban" target="_blank">
+                    <h1>
+                      <i class="fa fa-money"></i>
+                    </h1>
+                  </a>
+                </div>
+                <div class="col-md3 px-4">
+                  <a href="https://www.timecalculator.net/" title="time calculator" target="_blank">
+                    <h1>
+                      <i class="fa fa-clock-o"></i>
+                    </h1>
+                  </a>
+                </div>
+                <div class="col-md-6 ml-auto">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                      <span class="input-group-btn">
+                        <button class="btn btn-primary">Search</button>
+                      </span>
+                    </div>
+              </div>
             </div>
-        </header>
+          </header>
+          <!-- <section id="action" class="py-4 mb-4 bg-light">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 ml-auto">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                      <button class="btn btn-primary">Search</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section> -->
     </div>
     <section>
         <div class="container">
@@ -103,6 +124,7 @@ Best regards,
 Andrii Krugliakov
 Austrian Airlines
 Feedback Management Team</textarea>
+<button type="button" class="btn btn-primary my-4"onclick="copyToClipboard('#exampleTextarea')">Copy</button>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -209,6 +231,7 @@ Feedback Management Team </textarea>
             </div>
         </div>
     </section>
+    <script src="js/main.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
